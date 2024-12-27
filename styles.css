@@ -1,0 +1,576 @@
+:root {
+    --background: #F0F0F0;
+    --primary: teal;
+    --secondary: #F9E2E6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333333;
+    /* Dark gray */
+}
+
+.navbar {
+    background-color: var(--primary);
+    padding: 6px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins";
+    align-items: center;
+    font-size: 22px;
+    position: static;
+}
+
+.navbar .nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: 0.2s ease;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+.cta {
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.cta:hover {
+    background-color: rgb(1, 110, 110);
+}
+
+.navbar .nav a:hover {
+    background-color: rgb(1, 110, 110);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navbar .logo {
+    font-family: "Miltonian Tattoo", serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo h3 {
+    margin-left: 80px;
+}
+
+.logo img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    position: absolute;
+    left: -80px;
+    top: -70px;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--background);
+}
+
+.hero {
+    background-image: url("pics/Hero Image.png");
+    height: 100vh;
+
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+span {
+    color: var(--primary);
+}
+
+.hero-text {
+    margin-left: 100px;
+    position: relative;
+    top: -30px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 20px;
+    width: fit-content;
+    padding-left: 16px;
+}
+
+.hero-text button {
+    margin-top: 20px;
+    margin-left: 16px;
+    font-size: 22px;
+
+}
+
+.section-padding {
+    padding: 40px 80px;
+}
+
+.section-h1 {
+    font-size: 50px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    text-align: center;
+    color: #006D5B;
+}
+
+
+.usluge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.usluga-card {
+    border-radius: 8px;
+    width: 550px;
+    height: 300px;
+    transition: 0.3s ease;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    position: relative;
+}
+
+.usluga-card h2 {
+    font-size: 30px;
+}
+
+.usluga-card button {
+    width: fit-content;
+    padding: 8px;
+    align-self: flex-end;
+    font-size: 18px;
+    font-family: "Poppins";
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.usluga-card button:hover {
+    background-color: rgb(1, 110, 110);
+    color: white;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+.usluga-card:hover .image-container img {
+    filter: brightness(60%);
+}
+
+.whyUs {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.whyleft {
+    display: flex;
+    justify-content: center;
+    border-right: 4px solid teal;
+    flex: 1;
+}
+
+.whyleft h1 {
+    font-size: 50px;
+    width: fit-content;
+
+}
+
+.whyleft span {
+    font-family: "Miltonian Tattoo", serif;
+}
+
+
+.whyright {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.whyright h1 {
+    font-size: 30px;
+}
+
+.clients {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.clients h1 {
+    border: none;
+}
+
+.clients-say {
+    width: 60%;
+    border-radius: 6px;
+    background-color: var(--background);
+    padding: 20px 30px;
+    justify-content: center;
+}
+
+.clients-say i {
+    width: 100%;
+    font-size: 50px;
+    color: #bfbdbd;
+}
+
+.clients-say .end-quote {
+    text-align: end;
+}
+
+.clients-say p {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.client h3 {
+    font-weight: 500;
+}
+
+.client h4 {
+    color: rgb(171, 171, 171);
+    font-weight: 400;
+}
+
+.o-nama {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.onama-slika {
+    max-width: 40%;
+}
+
+.onama-slika img {
+    mix-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+}
+
+.onama-tekst {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.onama-tekst h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.onama-tekst h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.onama-tekst p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact {
+    background: linear-gradient(90deg, #FCE5E9, #EDEDED);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contact h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.contact h1 span {
+    font-family: "Miltonian Tattoo", serif;
+}
+
+
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex: 1;
+    align-items: end;
+    gap: 50px;
+}
+
+.contact-right {
+    flex: 1.2;
+}
+
+
+
+.sec {
+    display: flex;
+    gap: 10px;
+    width: 300px;
+}
+
+.sec i {
+    font-size: 40px;
+    color: teal;
+}
+
+
+
+.inside-sec h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+.cont h2 {
+    font-family: "Miltonian Tattoo", serif;
+    color: var(--primary);
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.cont p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact div {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact div i {
+    color: teal;
+}
+
+.footer-container:first-child {
+    flex: 1.7 1.7 300px;
+    min-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-container:not(:first-child) {
+    flex: 1 1 150px;
+    padding: 8px;
+    min-width: 200px;
+}
+
+.footer-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-container ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.footer-container ul li:hover {
+    color: teal;
+}
+
+.footer-container h3 {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width:1030px) {
+    .o-nama {
+        flex-direction: column-reverse;
+    }
+
+    .onama-slika {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .onama-tekst {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .onama-slika img {
+        object-fit: contain;
+        height: auto;
+        width: 50%;
+    }
+}
+
+@media (max-width:880px) {
+    .whyUs {
+        flex-direction: column;
+        height: auto;
+        width: unset;
+    }
+
+    .whyleft {
+        border-right: none;
+        border-bottom: 4px solid teal;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:1050px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .contact-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:1000px) {
+    .clients-say {
+        width: 100%;
+    }
+
+    .section-padding {
+        padding: 20px;
+    }
+}
+
+@media (max-width:870px) {
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        background-position: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .hero-text {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .usluga-card {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    .section-padding {
+        padding: 5px;
+    }
+}

@@ -376,6 +376,17 @@ span {
     font-weight: 400;
 }
 
+.clients-say {
+    position: relative;
+    overflow: hidden; /* Ovdje koristimo overflow: hidden za sprječavanje prikaza elementa van okvira tijekom animacije */
+}
+
+.client h3, .client h4, #testimonial-text {
+    opacity: 0; /* Početna nevidljivost */
+    transform: translateX(-50px); /* Početni pomak za animaciju (lijevo) */
+    animation: fadeInLeft 1s ease-out forwards; /* Primjena animacije */
+}
+
 .o-nama {
     display: flex;
     flex-wrap: wrap;
@@ -549,7 +560,10 @@ footer a {
     text-decoration:none;
     color: #333333;
 }
-
+/* Uklanjanje animacije kada tekst nije u fokusu */
+.fade-in-left {
+    animation: fadeInLeft 1s ease-out forwards;
+}
 
 @media (max-width:1030px) {
     .o-nama {
@@ -718,3 +732,16 @@ footer a {
         font-size:30px;
     }
 }
+
+/* Definicija same animacije */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Početno pomicanje van ekrana s lijeva */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Završi na svojoj poziciji */
+    }
+}
+

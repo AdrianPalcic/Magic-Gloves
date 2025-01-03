@@ -14,81 +14,96 @@ h1 {
     color: #333333;
     /* Dark gray */
 }
+
 p {
     color: #333333;
     line-height: 1.6;
 }
+
 .menu {
-    display:none;
-    padding:6px;
-    cursor:pointer;
+    display: none;
+    padding: 6px;
+    cursor: pointer;
 }
+
 .sidebar {
-    display:none;
-    width:100vw;
-    height:100vh;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:#3e3e3e;
-    position:fixed;
-    z-index:999;
-    padding:10px;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3e3e3e;
+    position: fixed;
+    z-index: 999;
+    padding: 10px;
 }
+
 .sidebar h2 {
-    margin-top:60px;
-    margin-left:20px;
+    margin-top: 60px;
+    margin-left: 20px;
     font-family: "Miltonian Tattoo", serif;
-    color:teal;
+    color: teal;
 }
+
 .sidebar p {
-    color:hsl(0, 0%, 60%);
-    font-size:12px;
-    margin:10px 0 0 20px;
+    color: hsl(0, 0%, 60%);
+    font-size: 12px;
+    margin: 10px 0 0 20px;
 }
+
 .sidebar ul a {
-    text-decoration:none;
-    color:white;
-    font-size:16px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
 }
+
 .sidebar ul {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
+
 .sidebar ul li {
-    padding:20px;
-    flex:1;
+    padding: 20px;
+    flex: 1;
 }
+
 .sidebar ul li {
-    flex:1;
+    flex: 1;
 }
+
 .sidebar ul li {
     list-style: none;
 }
+
 .sidebar ul {
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .sidebar ul li:hover {
-    background-color:hsl(0, 0%, 27%);
+    background-color: hsl(0, 0%, 27%);
 }
 
 .sidebar a:hover {
-    color:teal;
+    color: teal;
 }
+
 .close-button {
-    position:absolute;
-    color:var(--primary);
-    top:76px;
-    right:40px;
-    font-size:30px;
+    position: absolute;
+    color: var(--primary);
+    top: 76px;
+    right: 40px;
+    font-size: 30px;
 }
+
 .close-button:hover {
-    color:white;
+    color: white;
 }
+
 .active {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -243,6 +258,14 @@ span {
 
 .usluga-card h2 {
     font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.usluga-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    display: none;
 }
 
 .usluga-card button {
@@ -256,6 +279,7 @@ span {
     cursor: pointer;
     transition: 0.2s ease;
 }
+
 .usluga-card a {
     align-self: flex-end;
 }
@@ -284,6 +308,11 @@ span {
 
 .usluga-card:hover .image-container img {
     filter: brightness(60%);
+}
+
+.usluga-card:hover p {
+    display: block;
+    animation: fadeInLeft 0.5s ease-out forwards;
 }
 
 .whyUs {
@@ -378,13 +407,8 @@ span {
 
 .clients-say {
     position: relative;
-    overflow: hidden; /* Ovdje koristimo overflow: hidden za sprječavanje prikaza elementa van okvira tijekom animacije */
-}
-
-.client h3, .client h4, #testimonial-text {
-    opacity: 0; /* Početna nevidljivost */
-    transform: translateX(-50px); /* Početni pomak za animaciju (lijevo) */
-    animation: fadeInLeft 1s ease-out forwards; /* Primjena animacije */
+    overflow: hidden;
+    /* Ovdje koristimo overflow: hidden za sprječavanje prikaza elementa van okvira tijekom animacije */
 }
 
 .o-nama {
@@ -546,7 +570,7 @@ footer {
 .footer-container ul li {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    color:#333333
+    color: #333333
 }
 
 .footer-container ul li:hover {
@@ -556,14 +580,16 @@ footer {
 .footer-container h3 {
     margin-bottom: 10px;
 }
+
 footer a {
-    text-decoration:none;
+    text-decoration: none;
     color: #333333;
 }
-/* Uklanjanje animacije kada tekst nije u fokusu */
-.fade-in-left {
-    animation: fadeInLeft 1s ease-out forwards;
+
+.contact-modal {
+    position: absolute;
 }
+
 
 @media (max-width:1030px) {
     .o-nama {
@@ -643,8 +669,9 @@ footer a {
     .nav {
         display: none;
     }
+
     .menu {
-        display:block;
+        display: block;
     }
 
     .hero {
@@ -676,6 +703,7 @@ footer a {
         padding: 20px 5px;
     }
 }
+
 @media (max-width:500px) {
     .hero-text h1 {
         font-size: 35px;
@@ -684,52 +712,69 @@ footer a {
     .hero-text p {
         font-size: 16px;
     }
+
     .hero-text {
-        margin-left:0;
-        text-align:center;
+        margin-left: 0;
+        text-align: center;
     }
+
     .hero {
         background-position: center right -360px;
     }
+
     .section-h1 {
-        font-size:35px;
+        font-size: 35px;
     }
-    .usluga-card h2 {font-size:30px;}
+
+    .usluga-card h2 {
+        font-size: 30px;
+    }
+
     .whyleft h1 {
-        font-size:35px;
-        text-align:center;
+        font-size: 35px;
+        text-align: center;
     }
+
     .whyright h1 {
-        font-size:22px;
+        font-size: 22px;
     }
+
     .clients .clients-say p {
-        font-size:16px;
+        font-size: 16px;
     }
+
     .onama-tekst {
-        padding-left:0;
+        padding-left: 0;
     }
+
     .o-nama .onama-tekst h1 {
-        font-size:35px;
+        font-size: 35px;
     }
+
     .o-nama .onama-tekst h2 {
-        font-size:26px;
+        font-size: 26px;
         text-align: left;
     }
+
     .o-nama .onama-tekst p {
-        font-size:18px;
-        text-align:left;
+        font-size: 18px;
+        text-align: left;
     }
+
     .contact h1 {
-        font-size:35px;
+        font-size: 35px;
     }
+
     .sec h3 {
-        font-size:20px;
+        font-size: 20px;
     }
+
     .contact-right {
-        width:70%;
+        width: 70%;
     }
+
     .contact-left .sec i {
-        font-size:30px;
+        font-size: 30px;
     }
 }
 
@@ -737,11 +782,17 @@ footer a {
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-50px); /* Početno pomicanje van ekrana s lijeva */
+        transform: translateX(-50px);
+        /* Početno pomicanje van ekrana s lijeva */
     }
+
     100% {
         opacity: 1;
-        transform: translateX(0); /* Završi na svojoj poziciji */
+        transform: translateX(0);
+        /* Završi na svojoj poziciji */
     }
 }
 
+.fade-in-left {
+    animation: fadeInLeft 0.5s ease-out;
+}

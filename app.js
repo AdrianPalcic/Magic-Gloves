@@ -28,12 +28,31 @@ let isInView = false; // Ova varijabla prati da li je sekcija u vidu
 function updateTestimonial() {
     const testimonial = userData[currentIndex];
 
-    // Ažuriranje teksta, imena i imena firme
-    document.getElementById('testimonial-text').innerText = testimonial.text;
-    document.getElementById('client-name').innerText = testimonial.name;
-    document.getElementById('client-company').innerText = testimonial.imeFirme;
+    // Elements to animate
+    const textElement = document.getElementById('testimonial-text');
+    const nameElement = document.getElementById('client-name');
+    const companyElement = document.getElementById('client-company');
 
-    // Povećaj indeks za sljedeći ciklus, i ako smo na kraju niza, kreni ispočetka
+    // Add animation class
+    textElement.classList.add('fade-in-left');
+    nameElement.classList.add('fade-in-left');
+    companyElement.classList.add('fade-in-left');
+
+    // Update content after a slight delay for animation effect
+    setTimeout(() => {
+        textElement.innerText = testimonial.text;
+        nameElement.innerText = testimonial.name;
+        companyElement.innerText = testimonial.imeFirme;
+
+        // Remove animation class after the animation completes
+        setTimeout(() => {
+            textElement.classList.remove('fade-in-left');
+            nameElement.classList.remove('fade-in-left');
+            companyElement.classList.remove('fade-in-left');
+        }, 500); // Match the duration of the animation
+    }, 100); // Small delay to allow animation to trigger
+
+    // Update the index for the next testimonial
     currentIndex = (currentIndex + 1) % userData.length;
 }
 
@@ -69,3 +88,16 @@ const observer = new IntersectionObserver(handleIntersection, options);
 // Ciljamo sekciju
 const section = document.querySelector('.clients-say');
 observer.observe(section);
+
+
+const sidebar = document.querySelector('.sidebar');
+const menuToggle = document.querySelector('.menu');
+const closeMenu = document.getElementById("close-button");
+
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+});

@@ -21,204 +21,163 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c1d705d9bb.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="pics\favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="styles.css">
 
     <title>Magic Gloves</title>
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="pics/rukavice.png" loading="lazy" alt="rukavice za ciscenje">
+    <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="logo">
             <h3>Magic Gloves</h3>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <p>Email: <a href="mailto:info@cleaningbusiness.com">info@cleaningbusiness.com</a></p>
+            <p>Tel: <a href="tel:+385123456789">+385 12 345 6789</a></p>
+          </div>
         </div>
-        <div class="nav">
-            <a href="#home">Usluge</a>
-            <a href="#about">Zašto mi</a>
-            <a href="#services">O nama</a>
-            <a href="#contact">Kontakt</a>
+      </nav>
+    <section class="hero-section">
+        <div class="hero-content">
+          <h1>Vaš dom zaslužuje besprijekornu čistoću!</h1>
+          <p>Profesionalne usluge čišćenja za vaš dom ili ured. Brzo, pouzdano i povoljno.</p>
+          <a href="#contact" class="cta-button">Zatražite Besplatnu Ponudu</a>
         </div>
-        <div class="sidebar" id="sidebar">
-            <i class="fa-solid fa-x close-button" id="close-button"></i>
-            <h2>Magic Gloves</h2>
-            <p>*Servis za <span>čišćenje</span> domova, ureda i apartmana</p>
-            <ul>
-                <a href="#home"><li>Usluge</li></a>
-                <a href="#about"><li>Zašto mi</li></a>
-                <a href="#services"><li>O nama</li></a>
-                <a href="#contact"><li>Kontakt</li></a>
-            </ul>
+      </section>
+      <section class="services-section" id="services">
+        <h2>Naše Usluge</h2>
+        <div class="services-grid">
+          <!-- Card 1: Čišćenje Domova -->
+          <div class="service-card">
+            <div class="icon">🏠</div>
+            <h3>Čišćenje Domova</h3>
+            <p>Potpuno čišćenje vašeg doma, brzo i pouzdano.</p>
+            <a href="#learn-more" class="cta-button">Saznajte Više</a>
+          </div>
+      
+          <!-- Card 2: Čišćenje Ureda -->
+          <div class="service-card">
+            <div class="icon">🏢</div>
+            <h3>Čišćenje Ureda</h3>
+            <p>Profesionalno čišćenje poslovnih prostora.</p>
+            <a href="#learn-more" class="cta-button">Saznajte Više</a>
+          </div>
+      
+          <!-- Card 3: Čišćenje Vikendica -->
+          <div class="service-card">
+            <div class="icon">🌲</div>
+            <h3>Čišćenje Vikendica</h3>
+            <p>Čišćenje vašeg odmorišta za opušten boravak.</p>
+            <a href="#learn-more" class="cta-button">Saznajte Više</a>
+          </div>
+      
+          <!-- Card 4: Peglanje -->
+          <div class="service-card">
+            <div class="icon">👔</div>
+            <h3>Peglanje</h3>
+            <p>Profesionalno peglanje vaše odjeće.</p>
+            <a href="#learn-more" class="cta-button">Saznajte Više</a>
+          </div>
         </div>
-        <div class="menu" id="menu">
-            <i class="fa-solid fa-bars"></i>
+      </section>
+      <section class="testimonials-section">
+        <h2>Što Naši Klijenti Kažu</h2>
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <p>"Odličan posao! Moj dom nikad nije bio tako čist. Preporučujem svima!"</p>
+            <div class="client-info">
+              <h4>Ivana</h4>
+              <p>Zagreb</p>
+            </div>
+          </div>
+      
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <p>"Brzo i profesionalno. Ured je savršen za rad nakon njihovog čišćenja."</p>
+            <div class="client-info">
+              <h4>Marko</h4>
+              <p>Split</p>
+            </div>
+          </div>
+      
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <p>"Vikendica je blistava, a peglanje odjeće besprijekorno. Hvala!"</p>
+            <div class="client-info">
+              <h4>Ana</h4>
+              <p>Rijeka</p>
+            </div>
+          </div>
+      
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <p>"Pouzdani i ljubazni. Svaki put ostavim ključeve bez brige."</p>
+            <div class="client-info">
+              <h4>Petar</h4>
+              <p>Osijek</p>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="hero">
-        <div class="hero-text">
-            <h1>Vaš prostor, <span>Naša briga</span></h1>
-            <p>Pružamo visokokvalitetne usluge čišćenja domova,<br> poslovnih prostora i ostalih objekata<br> na
-                području
-                <span>Zagreba</span> i okolice
+      </section>
+      <section class="about-section">
+        <div class="about-container">
+          <!-- Image Side -->
+          <div class="about-image">
+            <img src="pics\magicgloves.JPG" alt="Woman Cleaning">
+          </div>
+      
+          <!-- Text Side -->
+          <div class="about-text">
+            <h2>O Nama</h2>
+            <p>
+              Mi smo tim stručnjaka za čišćenje s višegodišnjim iskustvom. Naša misija je pružiti vam besprijekorno čist dom ili ured uz korištenje sigurnih i ekološki prihvatljivih proizvoda. Bez obzira na veličinu prostora, posvećujemo se svakom detalju kako biste vi mogli uživati u čistoći i miru.
             </p>
-            <button class="cta">Javi nam se!</button>
+          </div>
         </div>
-    </div>
-    <section class="usluge section-padding">
-        <h1 class="section-h1">
-            Naše usluge </h1>
-        <div class="usluge-container">
-            <div class="usluga-card" id="usluga1">
-                <div class="image-container">
-                    <img loading="lazy" src="pics/cisdoma.png" alt="rukavice za cisc">
-                </div>
-                <h2>Čišćenje doma</h2>
-                <a href="ciscenja-domova.html"><button>Pogledaj više</button></a>
-            </div>
-            <div class="usluga-card" id="usluga2">
-                <div class="image-container">
-                    <img loading="lazy" src="pics/uredi.jpg" alt="rukavice za cisc">
-                </div>
-                <h2>Čišćenje ureda</h2>
-                <a href="ciscenje-ureda.html"><button>Pogledaj više</button></a>
-            </div>
-            <div class="usluga-card" id="usluga3">
-                <div class="image-container">
-                    <img loading="lazy" src="pics/apartmani.jpg" alt="rukavice za cisc">
-                </div>
-                <h2>Čišćenje kuća za odmor i apartmana</h2>
-                <a href="ciscenje-apartmana.html"><button>Pogledaj više</button></a>
-            </div>
-            <div class="usluga-card" id="usluga4">
-                <div class="image-container">
-                    <img loading="lazy" src="pics/peglanje.png" alt="rukavice za cisc">
-                </div>
-                <h2>Peglanje</h2>
-                <a href="peglanje.html"><button>Pogledaj više</button></a>
-            </div>
-        </div>
-    </section>
-    <section class="whyUs section-padding">
-        <div class="whyleft">
-            <h1>Zašto <span>Magic Gloves?</span></h1>
-        </div>
-        <div class="whyright">
-            <h1><span>Iskustvo, povjerenje i potpuna predanost</span> kvaliteti usluge. Uslugu čišćenja Vašeg prostora
-                provodimo
-                poštujući najviše standarde kvalitete.</h1>
-        </div>
-    </section>
-    <section class="clients section-padding">
-        <h1 class="section-h1">Naši klijenti kažu</h1>
-        <div class="clients-say">
-            <i class="fa-solid fa-quote-left"></i>
-            <p id="testimonial-text">Ovu uslugu čišćenja koristim već više od godine dana i ne bih mogao biti zadovoljniji. Uvijek su točni, temeljiti i ostave moj dom besprijekorno čistim!</p>
-            <i class="fa-solid fa-quote-right end-quote"></i>
-            <div class="client">
-                <h3 id="client-name">John Doe</h3>
-                <h4 id="client-company">Ime Firme</h4>
-            </div>
-        </div>
-    </section>
-    <section class="o-nama section-padding">
-        <div class="onama-slika">
-            <img src="pics\magicgloves.JPG" alt="teta za ciscenje ureda domova i apartmana, uz to i peglanje">
-        </div>
-        <div class="onama-tekst">
-            <h1>S nama</h1>
-            <h2><span>Donesite svježinu u Vaš prostor</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aperiam error neque alias ipsa eum at a
-                voluptates sit, ipsum possimus non dolorem est, quod dolores rem incidunt earum temporibus. Lorem
-                ipsum
-                dolor sit amet consectetur adipisicing elit. Aut commodi quia necessitatibus dolore laudantium omnis
-                odit</p>
-        </div>
-    </section>
-    <section class="contact">
-        <h1>Za čisti prostor - odaberite <span>Magic Gloves</span> </h1>
+      </section>
+      <section class="contact-section">
         <div class="contact-container">
-            <div class="contact-left">
-                <div class="sec">
-                    <i class="fa-solid fa-phone"></i>
-                    <div class="inside-sec">
-                        <h3>Telefon</h3>
-                        <p>+385 91 123 4567</p>
-                    </div>
-                </div>
-                <div class="sec">
-                    <i class="fa-regular fa-clock"></i>
-                    <div class="inside-sec">
-                        <h3>Radno vrijeme</h3>
-                        <p>08:00h - 16:00h</p>
-                    </div>
-                </div>
-                <div class="sec">
-                    <i class="fa-regular fa-envelope"></i>
-                    <div class="inside-sec">
-                        <h3>Email</h3>
-                        <p>magicgloves@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-right">
-                <img src="/pics/rukavice.png" alt="rukavice za ciscenje">
-            </div>
+          <h2>Kontaktirajte Nas</h2>
+          <p>
+            Imate pitanja ili želite zatražiti ponudu? Slobodno nas kontaktirajte putem e-pošte ili telefona. Naš tim će vam odgovoriti u najkraćem mogućem roku.
+          </p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:info@cleaningbusiness.com">info@cleaningbusiness.com</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+385123456789">+385 12 345 6789</a></p>
+          </div>
+          <a href="#contact" class="cta-button">Kontaktirajte Nas</a>
         </div>
-    </section>
-    <footer>
-        <div class="footer-container first">
-            <div class="logo-footer">
-                <div class="cont">
-                    <h2>Magic Gloves</h2>
-                    <p>Magic Gloves, obrt za čišćenje</p>
-                </div>
-            </div>
-            <div class="footer-contact">
-                <div class="contain">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>+385 91 123 4567</p>
-                </div>
-                <div class="contain">
-                    <i class="fa-regular fa-envelope"></i>
-                    <p>magicgloves@gmail.com</p>
-                </div>
-            </div>
+      </section>
+      <footer class="footer-section">
+        <div class="footer-container">
+          <!-- Copyright -->
+          <div class="footer-copyright">
+            <p>&copy; 2023 Vaše Čišćenje. Sva prava pridržana.</p>
+          </div>
+      
+          <!-- Social Media Links (Optional) -->
+          <div class="footer-social">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+      
+          <!-- Contact Info -->
+          <div class="footer-contact">
+            <p><strong>Email:</strong> <a href="mailto:info@cleaningbusiness.com">info@cleaningbusiness.com</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+385123456789">+385 12 345 6789</a></p>
+          </div>
+        </div>
+      </footer>
+      
 
-        </div>
-        <div class="footer-container">
-            <h3>Naše Usluge</h3>
-            <ul>
-                <a href="ciscenja-domova.html"><li>Čišćenje doma</li></a>
-                <a href="ciscenje-ureda.html"><li>Čišćenje ureda</li></a>
-                <a href="ciscenje-apartmana.html"><li>Čišćenje kuća za odmor i apartmana</li></a>
-                <a href="peglanje.html"><li>Peglanje</li></a>
-            </ul>
-        </div>
-        <div class="footer-container">
-            <h3>Navigacija</h3>
-            <ul>
-                <li>Usluge</li>
-                <li>Zašto mi</li>
-                <li>O nama</li>
-                <li>Drugi o nama</li>
-                <li>Kontakt</li>
-            </ul>
-        </div>
-        <div class="footer-container">
-            <h3>Pravni podaci</h3>
-            <ul>
-                <li>Politika privatnosti</li>
-                <li>Uvjeti korištenja</li>
-            </ul>
-        </div>
-        <div class="footer-container">
-            <h3>Kontakt</h3>
-            <ul>
-                <li>+385 91 123 4567</li>
-                <li>magicgloves@gmail.com</li>
-                <li>Faceboook</li>
-        </div>
-    </footer>
-    <script src="app.js"></script>
-</body>
+    </body>
 
 </html>

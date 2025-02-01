@@ -1,798 +1,517 @@
-:root {
-    --background: #F0F0F0;
-    --primary: teal;
-    --secondary: #F9E2E6;
-}
-
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-h1 {
-    color: #333333;
-    /* Dark gray */
-}
-
-p {
-    color: #333333;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
     line-height: 1.6;
 }
 
-.menu {
-    display: none;
-    padding: 6px;
-    cursor: pointer;
-}
-
-.sidebar {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #3e3e3e;
-    position: fixed;
-    z-index: 999;
-    padding: 10px;
-}
-
-.sidebar h2 {
-    margin-top: 60px;
-    margin-left: 20px;
-    font-family: "Miltonian Tattoo", serif;
-    color: teal;
-}
-
-.sidebar p {
-    color: hsl(0, 0%, 60%);
-    font-size: 12px;
-    margin: 10px 0 0 20px;
-}
-
-.sidebar ul a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-.sidebar ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar ul li {
-    padding: 20px;
-    flex: 1;
-}
-
-.sidebar ul li {
-    flex: 1;
-}
-
-.sidebar ul li {
-    list-style: none;
-}
-
-.sidebar ul {
-    margin-top: 20px;
-}
-
-.sidebar ul li:hover {
-    background-color: hsl(0, 0%, 27%);
-}
-
-.sidebar a:hover {
-    color: teal;
-}
-
-.close-button {
-    position: absolute;
-    color: var(--primary);
-    top: 76px;
-    right: 40px;
-    font-size: 30px;
-}
-
-.close-button:hover {
-    color: white;
-}
-
-.active {
-    display: flex;
-    flex-direction: column;
+span {
+    color: #00796B;
 }
 
 .navbar {
-    background-color: var(--primary);
-    padding: 6px;
-    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    z-index: 1000;
+    margin: 0 auto;
+
+    position: absolute;
+
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
-    font-family: "Poppins";
     align-items: center;
-    font-size: 22px;
-    position: static;
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.navbar .nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    transition: 0.2s ease;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 10px;
-
-}
-
-.cta {
-    background-color: var(--primary);
-    outline: none;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.cta:hover {
-    background-color: rgb(1, 110, 110);
-}
-
-.navbar .nav a:hover {
-    background-color: rgb(1, 110, 110);
-}
-
-.nav {
+.logo {
+    font-family: "Miltonian Tattoo", cursive;
+    font-size: 24px;
     display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-
-.navbar .logo {
-    font-family: "Miltonian Tattoo", serif;
-    display: flex;
+    color: white;
     align-items: center;
     position: relative;
-}
-
-.logo h3 {
-    margin-left: 80px;
 }
 
 .logo img {
-    width: 240px;
-    height: 240px;
-    object-fit: contain;
+    width: 150px;
+    height: auto;
     position: absolute;
-    left: -80px;
-    top: -70px;
+    left: -110px;
+    top: -10px;
 }
 
-body {
-    font-family: "Poppins";
-    background-color: var(--background);
+.contact-info {
+    text-align: right;
 }
 
-.hero {
-    background-image: url("pics/Hero Image.png");
-    height: 100vh;
-
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-}
-
-span {
-    color: var(--primary);
-}
-
-.hero-text {
-    margin-left: 100px;
-    position: relative;
-    top: -30px;
-}
-
-.hero-text h1 {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.hero-text p {
-    font-size: 26px;
-    font-weight: 500;
-    margin-top: 20px;
-    width: fit-content;
-    padding-left: 16px;
-}
-
-.hero-text button {
-    margin-top: 20px;
-    margin-left: 16px;
-    font-size: 22px;
-
-}
-
-.section-padding {
-    padding: 40px 80px;
-}
-
-.section-h1 {
-    font-size: 50px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-    text-align: center;
-    color: #006D5B;
-}
-
-
-.usluge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    margin-top: 40px;
-    justify-content: center;
-}
-
-.usluga-card {
-    border-radius: 8px;
-    width: 45%;
-    height: 300px;
-    transition: 0.3s ease;
+.contact-info p {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
     color: white;
+}
+
+.contact-info p a {
+    padding: 6px;
+    border-radius: 4px;
+    color: white;
+    background-color: #FFC107;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFC107;
+}
+
+.hero-section {
+    background: linear-gradient(to bottom, #E0F7FA, #FFFFFF);
+    padding: 120px 20px;
+    text-align: center;
+    background: url("pics/hero1.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
-    position: relative;
+    align-items: center;
 }
 
-.usluga-card h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.usluga-card p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: white;
-    display: none;
-}
-
-.usluga-card button {
-    width: fit-content;
-    padding: 8px;
-    font-size: 18px;
-    font-family: "Poppins";
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.usluga-card a {
-    align-self: flex-end;
-}
-
-.usluga-card button:hover {
-    background-color: rgb(1, 110, 110);
-    color: white;
-}
-
-.image-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-.image-container img {
+.hero-services {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.3s ease;
-    border-radius: 10px;
-}
-
-.usluga-card:hover .image-container img {
-    filter: brightness(60%);
-}
-
-.usluga-card:hover p {
-    display: block;
-    animation: fadeInLeft 0.5s ease-out forwards;
-}
-
-.whyUs {
     display: flex;
-    height: 300px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-
-.whyleft {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-right: 4px solid teal;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-services .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 10px;
+    width: 60%;
+    background-color: #f5f5f5;
+    margin: 10px 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.hero-services .icon-container:hover {
+    opacity: 1;
+}
+
+.hero-services .icon-container .hero-icon {
+    font-size: 1.5rem;
+}
+
+.hero-services .icon-container h3 {
+    font-weight: 400;
+    color: #333333;
+}
+
+.hero-content a {
+    padding: 8px;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #FFC107;
+}
+
+h1 {
+
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+p {
+
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+.hero-content h3 {
+    justify-self: end;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+
+
+
+
+
+.service-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #00796B;
+    margin-bottom: 10px;
+}
+
+
+
+.about-section {
+    padding: 80px 20px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 0.5;
+    align-self: flex-start;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+}
+
+.about-text {
     flex: 1;
 }
 
-.whyleft h1 {
-    font-size: 50px;
-    width: fit-content;
-
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #00796B;
+    margin-bottom: 20px;
 }
 
-.whyleft span {
-    font-family: "Miltonian Tattoo", serif;
+.about-text p {
+    font-size: 1.1rem;
+    color: #455A64;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
-
-.whyright {
-    flex: 2;
-    padding-left: 20px;
-}
-
-.whyright h1 {
-    font-size: 30px;
-}
-
-.clients {
-    background-color: var(--secondary);
+.about-text-subtext {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.about-text-subtext .about-subsec {
+    flex-basis: 400;
+    width: 47%;
+    margin: 10px;
+    padding: 8px;
+}
+
+
+
+.about-text-subtext .about-subsec .subsec-title i {
+    font-size: 2.2rem;
+    color: #00796B;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.about-text-subtext .about-subsec .subsec-text {
+    color: #455A64;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.about-text-subtext .about-subsec .subsec-text p {
+    font-size: 0.9rem;
+}
+
+.about-section::before,
+.about-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #E0F7FA;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about-section::before {
+    top: -50px;
+    left: -50px;
+}
+
+.about-section::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+.contact-section {
+    padding: 80px 20px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #00796B;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #455A64;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+.contact-section .contact-info p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #455A64;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #00796B;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #FFC107;
+}
+
+.contact-section::before,
+.contact-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #E0F7FA;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.contact-section::before {
+    top: -50px;
+    left: -50px;
+}
+
+.contact-section::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #00796B;
+    /* Darker shade for contrast */
+    color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.clients h1 {
-    border: none;
+.footer-copyright p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-.clients-say {
-    width: 60%;
-    border-radius: 6px;
-    background-color: var(--background);
-    padding: 20px 30px;
+.footer-social {
+    display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
-.clients-say i {
-    width: 100%;
-    font-size: 50px;
-    color: #bfbdbd;
+.footer-social a {
+    color: #FFFFFF;
+    font-size: 2rem;
+    transition: color 0.3s ease;
 }
 
-.clients-say .end-quote {
-    text-align: end;
+.footer-social a:hover {
+    color: #FFC107;
+    /* Accent color on hover */
 }
 
-.clients-say p {
-    font-size: 20px;
-    padding-left: 20px;
+.footer-contact p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin: 5px 0;
 }
 
-.client {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.client h3 {
-    font-weight: 500;
-}
-
-.client h4 {
-    color: rgb(171, 171, 171);
-    font-weight: 400;
-}
-
-.clients-say {
-    position: relative;
-    overflow: hidden;
-    /* Ovdje koristimo overflow: hidden za sprječavanje prikaza elementa van okvira tijekom animacije */
-}
-
-.o-nama {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.onama-slika {
-    max-width: 40%;
-}
-
-.onama-slika img {
-    mix-blend-mode: multiply;
-    width: 100%;
-    height: 100%;
-}
-
-.onama-tekst {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 80px;
-}
-
-.onama-tekst h1 {
-    font-size: 60px;
-    text-align: center;
-}
-
-.onama-tekst h2 {
-    text-align: center;
-    font-size: 35px;
-}
-
-.onama-tekst p {
-    font-size: 20px;
-    text-align: center;
-}
-
-.contact {
-    background: linear-gradient(90deg, #FCE5E9, #EDEDED);
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-container {
-    display: flex;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.contact h1 {
-    font-size: 50px;
-    text-align: center;
-}
-
-.contact h1 span {
-    font-family: "Miltonian Tattoo", serif;
-}
-
-
-
-.contact-left {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    flex: 1;
-    align-items: end;
-    gap: 50px;
-}
-
-.contact-right {
-    flex: 1.2;
-}
-
-
-
-.sec {
-    display: flex;
-    gap: 10px;
-    width: 300px;
-}
-
-.sec i {
-    font-size: 40px;
-    color: teal;
-}
-
-
-
-.inside-sec h3 {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-footer {
-    display: flex;
-    padding: 10px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.logo-footer {
-    display: flex;
-    align-items: center;
-}
-
-.cont h2 {
-    font-family: "Miltonian Tattoo", serif;
-    color: var(--primary);
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-}
-
-.cont p {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-contact div {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-contact div i {
-    color: teal;
-}
-
-.footer-container:first-child {
-    flex: 1.7 1.7 300px;
-    min-width: 350px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.footer-container:not(:first-child) {
-    flex: 1 1 150px;
-    padding: 8px;
-    min-width: 200px;
-}
-
-.footer-container ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-container ul li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    color: #333333
-}
-
-.footer-container ul li:hover {
-    color: teal;
-}
-
-.footer-container h3 {
-    margin-bottom: 10px;
-}
-
-footer a {
+.footer-contact a {
+    color: #FFFFFF;
     text-decoration: none;
-    color: #333333;
+    transition: color 0.3s ease;
 }
 
-.contact-modal {
-    position: absolute;
+.footer-contact a:hover {
+    color: #FFC107;
+    /* Accent color on hover */
 }
 
 
-@media (max-width:1030px) {
-    .o-nama {
-        flex-direction: column-reverse;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
     }
 
-    .onama-slika {
-        max-width: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    p {
+        font-size: 1rem;
     }
 
-    .onama-tekst {
-        width: 100%;
-        padding-left: 0;
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
     }
 
-    .onama-slika img {
-        object-fit: contain;
-        height: auto;
-        width: 50%;
-    }
-}
-
-@media (max-width:880px) {
-    .whyUs {
+    .navbar-container {
         flex-direction: column;
-        height: auto;
-        width: unset;
+        align-items: flex-start;
     }
 
-    .whyleft {
-        border-right: none;
-        border-bottom: 4px solid teal;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width:1050px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-left {
-        flex-direction: row;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .contact-right {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        justify-self: center;
-    }
-
-    .contact-right img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-@media (max-width:1000px) {
-    .clients-say {
-        width: 100%;
-    }
-
-    .section-padding {
-        padding: 20px;
-    }
-}
-
-@media (max-width:870px) {
-    .nav {
+    .navbar-container .contact-info {
         display: none;
     }
 
-    .menu {
-        display: block;
+    .nav-links {
+        margin-top: 10px;
     }
 
-    .hero {
-        background-position: center;
+    .contact-section .contact-info {
+        margin: 10px 0 20px 0;
     }
 
-    .hero-text h1 {
-        font-size: 40px;
-    }
-
-    .hero-text p {
-        font-size: 20px;
-    }
-
-    .hero-text {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 800px) {
-    .usluga-card {
-        height: 300px;
-        width: 100%;
-    }
-}
-
-@media (max-width:700px) {
-    .section-padding {
-        padding: 20px 5px;
-    }
-}
-
-@media (max-width:500px) {
-    .hero-text h1 {
-        font-size: 35px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .hero-text {
-        margin-left: 0;
+    .about-container {
+        flex-direction: column;
         text-align: center;
     }
 
-    .hero {
-        background-position: center right -360px;
+    .about-image img {
+        max-width: 80%;
     }
 
-    .section-h1 {
-        font-size: 35px;
+    .about-text h2 {
+        font-size: 2rem;
     }
 
-    .usluga-card h2 {
-        font-size: 30px;
+    .about-text p {
+        font-size: 1.1rem;
     }
 
-    .whyleft h1 {
-        font-size: 35px;
-        text-align: center;
+    .contact-section,
+    .about-section {
+        padding: 40px 20px;
     }
 
-    .whyright h1 {
-        font-size: 22px;
+    .contact-section h2 {
+        font-size: 2rem;
     }
 
-    .clients .clients-say p {
-        font-size: 16px;
+    .contact-section p {
+        font-size: 1.1rem;
     }
 
-    .onama-tekst {
-        padding-left: 0;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
-    .o-nama .onama-tekst h1 {
-        font-size: 35px;
+    .footer-social {
+        gap: 10px;
     }
 
-    .o-nama .onama-tekst h2 {
-        font-size: 26px;
-        text-align: left;
-    }
-
-    .o-nama .onama-tekst p {
-        font-size: 18px;
-        text-align: left;
-    }
-
-    .contact h1 {
-        font-size: 35px;
-    }
-
-    .sec h3 {
-        font-size: 20px;
-    }
-
-    .contact-right {
-        width: 70%;
-    }
-
-    .contact-left .sec i {
-        font-size: 30px;
+    .footer-contact p {
+        font-size: 1rem;
     }
 }
 
-/* Definicija same animacije */
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-        /* Početno pomicanje van ekrana s lijeva */
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 80px 15px;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-        /* Završi na svojoj poziciji */
+    h1 {
+        font-size: 1.8rem;
     }
-}
 
-.fade-in-left {
-    animation: fadeInLeft 0.5s ease-out;
+    p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-card p {
+        font-size: 1.1rem;
+    }
+
+    .client-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .client-info p {
+        font-size: 0.9rem;
+    }
 }
